@@ -3,7 +3,7 @@ import SelectedPlayerCard from "../SelectedPlayerCard/SelectedPlayerCard";
 
 const SelectedPlayers = ({ purchasePlayers }) => {
   return (
-    <div className="h-[500px]">
+    <div className="my-10 space-y-5">
       {purchasePlayers.map((purchasePlayer) => (
         <SelectedPlayerCard
           key={purchasePlayer.id}
