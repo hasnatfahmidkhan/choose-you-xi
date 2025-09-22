@@ -20,7 +20,9 @@ function App() {
       <Navbar></Navbar>
       <Hero></Hero>
       <div className="flex items-center justify-between mt-20">
-        <h2 className="text-3xl font-semibold">Available Players</h2>
+        <h2 className="text-3xl font-semibold transition-all duration-150">
+          {toggle ? "Available" : `Selected Player (${0}/6)`}
+        </h2>
         <div className="shadow-sm rounded-xl">
           <button
             onClick={() => setToggle(true)}
