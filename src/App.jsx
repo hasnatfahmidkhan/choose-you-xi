@@ -39,15 +39,15 @@ function App() {
 
       {/* Available and Selected players Section */}
       <div className="flex items-center justify-between mt-20">
-        <h2 className="text-3xl font-semibold transition-all duration-150">
+        <h2 className="text-sm xl:text-3xl font-semibold transition-all duration-150">
           {toggle
             ? "Available"
             : `Selected Player (${purchasePlayers.length}/6)`}
         </h2>
-        <div className="shadow-sm rounded-xl">
+        <div className="shadow-sm rounded-xl flex">
           <button
             onClick={() => setToggle(true)}
-            className={`rounded-r-none rounded-l-xl cursor-pointer px-5 py-3 border-r-0 transition duration-100 ${
+            className={`rounded-r-none rounded-l-xl cursor-pointer text-sm px-3 xl:px-5 py-3 border-r-0 transition duration-100 ${
               toggle ? " font-semibold bg-[#E7FE29]" : "text-gray-500"
             }`}
           >
@@ -55,7 +55,7 @@ function App() {
           </button>
           <button
             onClick={() => setToggle(false)}
-            className={`rounded-l-none rounded-r-xl cursor-pointer px-5 py-3 border-l-0 transition duration-100 ${
+            className={`rounded-l-none rounded-r-xl cursor-pointer text-sm px-3 xl:px-5 py-3 border-l-0 transition duration-100 ${
               !toggle
                 ? "font-semibold bg-[#E7FE29] text-black"
                 : "text-gray-500"
