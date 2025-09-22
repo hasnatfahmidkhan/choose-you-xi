@@ -75,6 +75,7 @@ function App() {
         </Suspense>
       ) : (
         <SelectedPlayers
+          setToggle={setToggle}
           handleDeletePlayer={handleDeletePlayer}
           purchasePlayers={purchasePlayers}
         ></SelectedPlayers>

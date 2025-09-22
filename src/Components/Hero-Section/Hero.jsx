@@ -8,7 +8,7 @@ const Hero = () => {
       className="bg-[#131313] bg-no-repeat bg-cover bg-center rounded-xl h-[400px] lg:h-[580px] px-4 text-center flex flex-col items-center justify-center gap-6 text-white mt-3 lg:mt-0"
     >
       <div>
-        <img className="w-40 md:w-0" src={bannerImg} alt="" />
+        <img className="w-40 md:w-full" src={bannerImg} alt="" />
       </div>
       <h1 className="lg:text-5xl font-bold">
         Assemble Your Ultimate Dream 11 Cricket Team
