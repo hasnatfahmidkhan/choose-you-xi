@@ -14,25 +14,39 @@ const fetchPlayers = async () => {
 const playersPromise = fetchPlayers();
 
 function App() {
+  const [availableBalance, setAvailableBalance] = useState(100000000);
   const [toggle, setToggle] = useState(true);
   const [purchasePlayers, setPurchasePlayers] = useState([]);
+
+  // function for purchasePlayers
   const handlePurchasePlayer = (player) => {
-    const newPurchasePlayers = [...purchasePlayers, player];
-    setPurchasePlayers(newPurchasePlayers);
+    const purchasePrice = Number(
+      player.price.split("BDT").join("").split(",").join("")
+    );
+    if (availableBalance > purchasePrice) {
+      const newPurchasePlayers = [...purchasePlayers, player];
+      setAvailableBalance(availableBalance - purchasePrice);
+      setPurchasePlayers(newPurchasePlayers);
+      toast(`You Purchased ${player.player_name}`);
+    } else toast("Not Enough Balance");
   };
 
-  const handleDeletePlayer = (deletePlayer) => {
+  const handleDeletePlayer = (player) => {
     const filteredPlayers = purchasePlayers.filter(
-      (purchasePlayer) => purchasePlayer.id !== deletePlayer.id
+      (purchasePlayer) => purchasePlayer.id !== player.id
     );
     setPurchasePlayers(filteredPlayers);
-    toast(`${deletePlayer.name} Removed!`);
+    const purchasePrice = Number(
+      player.price.split("BDT").join("").split(",").join("")
+    );
+    setAvailableBalance(availableBalance + purchasePrice);
+    toast(`${player.name} Removed!`);
   };
   return (
     <div className="sora-font w-11/12 2xl:w-10/12 mx-auto">
       <ToastContainer />
       {/* Navbar Section */}
-      <Navbar></Navbar>
+      <Navbar availableBalance={availableBalance}></Navbar>
 
       {/* Hero Section  */}
       <Hero></Hero>

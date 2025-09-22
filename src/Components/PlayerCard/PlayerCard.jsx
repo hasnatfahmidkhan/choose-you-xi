@@ -10,7 +10,6 @@ const PlayerCard = ({ player, handlePurchasePlayer, purchasePlayers }) => {
     }
     if (!isSelected) {
       handlePurchasePlayer(player);
-      toast(`You Purchased ${player.player_name}`);
     }
   };
 

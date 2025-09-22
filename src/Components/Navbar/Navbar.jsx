@@ -1,7 +1,7 @@
 import React from "react";
 import navLogo from "../../assets/logo.png";
 import currencyImg from "../../assets/Currency.png";
-const Navbar = () => {
+const Navbar = ({availableBalance}) => {
   return (
     <nav className="navbar md:py-8">
       {/* ===== Left: Logo ===== */}
@@ -36,7 +36,7 @@ const Navbar = () => {
 
               className="btn font-medium inline-flex items-center"
             >
-              <span>100,000,000</span>Coin <img src={currencyImg} alt="" />
+              <span>{availableBalance}</span>Coin <img src={currencyImg} alt="" />
             </button>
           </li>
         </ul>
