@@ -1,0 +1,135 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "player_img": "https://i.postimg.cc/tJLfKpDR/Sakib-All-Hasan.jpg",
+    "player_name": "Shakib Al Hasan",
+    "player_country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "rating": 95,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Left-arm orthodox spin",
+    "price": "18,000,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "player_img": "https://i.postimg.cc/Y2gJFmSh/Tamim-Iqbal.jpg",
+    "player_name": "Tamim Iqbal",
+    "player_country": "Bangladesh",
+    "playing_role": "Batsman",
+    "rating": 90,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "price": "12,000,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "player_img": "https://i.postimg.cc/g0DdFXfM/musfiqur-rahman.png",
+    "player_name": "Mushfiqur Rahim",
+    "player_country": "Bangladesh",
+    "playing_role": "Wicketkeeper Batsman",
+    "rating": 92,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "N/A",
+    "price": "14,400,000 BDT"
+  },
+{
+  "id": "550e8400-e29b-41d4-a716-446655440004",
+  "player_img": "https://i.postimg.cc/fT1Dshk9/Mehedi-miraj.webp",
+  "player_name": "Mehedi Hasan Miraz",
+  "player_country": "Bangladesh",
+  "playing_role": "Bowler",
+  "rating": 85,
+  "batting_style": "Right-hand bat",
+  "bowling_style": "Right-arm offbreak",
+  "price": "10,800,000 BDT"
+}
+,
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440005",
+    "player_img": "https://i.postimg.cc/NjWMdHRZ/Mustafizur-Rahman.webp",
+    "player_name": "Mustafizur Rahman",
+    "player_country": "Bangladesh",
+    "playing_role": "Bowler",
+    "rating": 93,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Left-arm fast-medium",
+    "price": "15,600,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440006",
+    "player_img": "https://i.postimg.cc/kGfGsYyy/Afif-Hosain.jpg",
+    "player_name": "Afif Hossain",
+    "player_country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "rating": 84,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "price": "9,000,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440007",
+    "player_img": "https://i.postimg.cc/xCp2qrjM/Mahdullah.jpg",
+    "player_name": "Mahmudullah Riyad",
+    "player_country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "rating": 88,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "price": "11,400,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440008",
+    "player_img": "https://i.postimg.cc/j2KnZ7YR/liton-das.jpg",
+    "player_name": "Liton Das",
+    "player_country": "Bangladesh",
+    "playing_role": "Wicketkeeper Batsman",
+    "rating": 89,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "N/A",
+    "price": "13,200,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440009",
+    "player_img": "https://i.postimg.cc/g0Qvqj00/taskin-ahmed.jpg",
+    "player_name": "Taskin Ahmed",
+    "player_country": "Bangladesh",
+    "playing_role": "Bowler",
+    "rating": 87,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm fast",
+    "price": "10,200,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440010",
+    "player_img": "https://i.postimg.cc/Jhnq5Scp/andre-russell.webp",
+    "player_name": "Andre Russell",
+    "player_country": "West Indies",
+    "playing_role": "All-rounder",
+    "rating": 96,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast-medium",
+    "price": "24,000,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440011",
+    "player_img": "https://i.postimg.cc/7Z1M4wXs/David-Warner.webp",
+    "player_name": "David Warner",
+    "player_country": "Australia",
+    "playing_role": "Batsman",
+    "rating": 94,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm legbreak",
+    "price": "21,600,000 BDT"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440012",
+    "player_img": "https://i.postimg.cc/d1Njf6nJ/Rashid-khan.webp",
+    "player_name": "Rashid Khan",
+    "player_country": "Afghanistan",
+    "playing_role": "Bowler",
+    "rating": 97,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm leg-spin",
+    "price": "26,400,000 BDT"
+  }
+]
