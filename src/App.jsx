@@ -17,8 +17,13 @@ function App() {
   const [toggle, setToggle] = useState(true);
   return (
     <div className="sora-font w-11/12 2xl:w-10/12 mx-auto">
+      {/* Navbar Section */}
       <Navbar></Navbar>
+
+      {/* Hero Section  */}
       <Hero></Hero>
+
+      {/* Available and Selected players Section */}
       <div className="flex items-center justify-between mt-20">
         <h2 className="text-3xl font-semibold transition-all duration-150">
           {toggle ? "Available" : `Selected Player (${0}/6)`}

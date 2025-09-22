@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import PlayerCard from "../PlayerCard/PlayerCard";
 
-const AvailablePlayers = ({ playersPromise }) => {
+const AvailablePlayers = ({ playersPromise}) => {
   const players = use(playersPromise);
   return (
     <div className=" my-8">

@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import userImg from "../../assets/user-1.png";
 import flagImg from "../../assets/report-1.png";
 const PlayerCard = ({ player }) => {
+  const [isSelected, setIsSelected] = useState(false);
+  const handleSelected = () => {
+    setIsSelected(true);
+  };
 
   return (
     <div className="card bg-base-100 border border-gray-100 shadow-sm p-5 rounded-xl">
@@ -14,7 +18,12 @@ const PlayerCard = ({ player }) => {
       </figure>
       <div className="pt-4">
         <div className="flex items-center gap-3">
-          <img loading="lazy" className="w-6 h-6 object-cover" src={userImg} alt="" />
+          <img
+            loading="lazy"
+            className="w-6 h-6 object-cover"
+            src={userImg}
+            alt=""
+          />
           <h2 className="card-title">{player.player_name}</h2>
         </div>
         <div className="flex justify-between items-center py-4 border-b border-gray-300">
@@ -36,8 +45,16 @@ const PlayerCard = ({ player }) => {
             <h3 className="text-gray-400">{player.bowling_style}</h3>
           </div>
           <div className="flex items-center justify-between">
-            <h2>Price: <span>{player.price}</span></h2>
-            <button className="btn w-fit font-normal">Choose Player</button>
+            <h2>
+              Price: <span>{player.price}</span>
+            </h2>
+            <button
+              disabled={isSelected}
+              onClick={handleSelected}
+              className="btn w-fit font-normal"
+            >
+              {isSelected ? "Selected" : "Choose Player"}
+            </button>
           </div>
         </div>
       </div>
