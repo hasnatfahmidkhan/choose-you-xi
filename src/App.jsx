@@ -5,7 +5,7 @@ import Hero from "./Components/Hero-Section/Hero";
 import Navbar from "./Components/Navbar/Navbar";
 import Loader from "./Components/Loader/Loader";
 import SelectedPlayers from "./Components/SelectedPlayers/SelectedPlayers";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 // Fetch player promise from player json
 const fetchPlayers = async () => {
   const res = await fetch("./players.json");
@@ -19,6 +19,14 @@ function App() {
   const handlePurchasePlayer = (player) => {
     const newPurchasePlayers = [...purchasePlayers, player];
     setPurchasePlayers(newPurchasePlayers);
+  };
+
+  const handleDeletePlayer = (deletePlayer) => {
+    const filteredPlayers = purchasePlayers.filter(
+      (purchasePlayer) => purchasePlayer.id !== deletePlayer.id
+    );
+    setPurchasePlayers(filteredPlayers);
+    toast(`${deletePlayer.name} Removed!`);
   };
   return (
     <div className="sora-font w-11/12 2xl:w-10/12 mx-auto">
@@ -66,7 +74,10 @@ function App() {
           ></AvailablePlayers>
         </Suspense>
       ) : (
-        <SelectedPlayers purchasePlayers={purchasePlayers}></SelectedPlayers>
+        <SelectedPlayers
+          handleDeletePlayer={handleDeletePlayer}
+          purchasePlayers={purchasePlayers}
+        ></SelectedPlayers>
       )}
     </div>
   );
