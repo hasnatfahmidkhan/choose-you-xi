@@ -3,7 +3,7 @@ import navLogo from "../../assets/logo.png";
 import currencyImg from "../../assets/Currency.png";
 const Navbar = () => {
   return (
-    <nav className="navbar w-11/12 2xl:w-10/12 mx-auto md:py-8">
+    <nav className="navbar md:py-8">
       {/* ===== Left: Logo ===== */}
       <div className="flex-1">
         <a href="/" className="text-2xl font-bold">

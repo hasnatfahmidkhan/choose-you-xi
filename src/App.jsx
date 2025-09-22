@@ -1,9 +1,10 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import AvailablePlayers from "./Components/AvailablePlayers/AvailablePlayers";
 import Hero from "./Components/Hero-Section/Hero";
 import Navbar from "./Components/Navbar/Navbar";
 import Loader from "./Components/Loader/Loader";
+import SelectedPlayers from "./Components/SelectedPlayers/SelectedPlayers";
 
 // Fetch player promise from player json
 const fetchPlayers = async () => {
@@ -13,13 +14,41 @@ const fetchPlayers = async () => {
 const playersPromise = fetchPlayers();
 
 function App() {
+  const [toggle, setToggle] = useState(true);
   return (
-    <div className="sora-font">
+    <div className="sora-font w-11/12 2xl:w-10/12 mx-auto">
       <Navbar></Navbar>
       <Hero></Hero>
-      <Suspense fallback={<Loader />}>
-        <AvailablePlayers playersPromise={playersPromise}></AvailablePlayers>
-      </Suspense>
+      <div className="flex items-center justify-between mt-20">
+        <h2 className="text-3xl font-semibold">Available Players</h2>
+        <div className="shadow-sm rounded-xl">
+          <button
+            onClick={() => setToggle(true)}
+            className={`rounded-r-none rounded-l-xl cursor-pointer px-5 py-3 border-r-0 transition duration-100 ${
+              toggle ? " font-semibold bg-[#E7FE29]" : "text-gray-500"
+            }`}
+          >
+            Available
+          </button>
+          <button
+            onClick={() => setToggle(false)}
+            className={`rounded-l-none rounded-r-xl cursor-pointer px-5 py-3 border-l-0 transition duration-100 ${
+              !toggle
+                ? "font-semibold bg-[#E7FE29] text-black"
+                : "text-gray-500"
+            }`}
+          >
+            Selected <span>(0)</span>
+          </button>
+        </div>
+      </div>
+      {toggle ? (
+        <Suspense fallback={<Loader />}>
+          <AvailablePlayers playersPromise={playersPromise}></AvailablePlayers>
+        </Suspense>
+      ) : (
+        <SelectedPlayers></SelectedPlayers>
+      )}
     </div>
   );
 }
