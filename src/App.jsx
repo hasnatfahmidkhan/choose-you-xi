@@ -27,7 +27,7 @@ function App() {
       const newPurchasePlayers = [...purchasePlayers, player];
       setAvailableBalance(availableBalance - purchasePrice);
       setPurchasePlayers(newPurchasePlayers);
-      toast(`You Purchased ${player.player_name}`);
+      toast(`${player.player_name} Purchased!`);
     } else toast("Not Enough Balance");
   };
 
@@ -40,7 +40,7 @@ function App() {
       player.price.split("BDT").join("").split(",").join("")
     );
     setAvailableBalance(availableBalance + purchasePrice);
-    toast(`${player.name} Removed!`);
+    toast(`${player.player_name} Removed!`);
   };
   return (
     <div className="sora-font w-11/12 2xl:w-10/12 mx-auto">

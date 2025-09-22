@@ -1,4 +1,3 @@
-import React from "react";
 import SelectedPlayerCard from "../SelectedPlayerCard/SelectedPlayerCard";
 
 const SelectedPlayers = ({
