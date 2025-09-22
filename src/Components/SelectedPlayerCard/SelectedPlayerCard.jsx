@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
 
-const SelectedPlayerCard = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const SelectedPlayerCard = ({ purchasePlayer }) => {
+  console.log(purchasePlayer);
+  return <div></div>;
+};
 
-export default SelectedPlayerCard
+export default SelectedPlayerCard;

@@ -5,7 +5,7 @@ import Hero from "./Components/Hero-Section/Hero";
 import Navbar from "./Components/Navbar/Navbar";
 import Loader from "./Components/Loader/Loader";
 import SelectedPlayers from "./Components/SelectedPlayers/SelectedPlayers";
-
+import { ToastContainer } from "react-toastify";
 // Fetch player promise from player json
 const fetchPlayers = async () => {
   const res = await fetch("./players.json");
@@ -15,8 +15,14 @@ const playersPromise = fetchPlayers();
 
 function App() {
   const [toggle, setToggle] = useState(true);
+  const [purchasePlayers, setPurchasePlayers] = useState([]);
+  const handlePurchasePlayer = (player) => {
+    const newPurchasePlayers = [...purchasePlayers, player];
+    setPurchasePlayers(newPurchasePlayers);
+  };
   return (
     <div className="sora-font w-11/12 2xl:w-10/12 mx-auto">
+      <ToastContainer />
       {/* Navbar Section */}
       <Navbar></Navbar>
 
@@ -26,7 +32,9 @@ function App() {
       {/* Available and Selected players Section */}
       <div className="flex items-center justify-between mt-20">
         <h2 className="text-3xl font-semibold transition-all duration-150">
-          {toggle ? "Available" : `Selected Player (${0}/6)`}
+          {toggle
+            ? "Available"
+            : `Selected Player (${purchasePlayers.length}/6)`}
         </h2>
         <div className="shadow-sm rounded-xl">
           <button
@@ -45,16 +53,20 @@ function App() {
                 : "text-gray-500"
             }`}
           >
-            Selected <span>(0)</span>
+            Selected <span>({purchasePlayers.length})</span>
           </button>
         </div>
       </div>
       {toggle ? (
         <Suspense fallback={<Loader />}>
-          <AvailablePlayers playersPromise={playersPromise}></AvailablePlayers>
+          <AvailablePlayers
+            handlePurchasePlayer={handlePurchasePlayer}
+            playersPromise={playersPromise}
+            purchasePlayers={purchasePlayers}
+          ></AvailablePlayers>
         </Suspense>
       ) : (
-        <SelectedPlayers></SelectedPlayers>
+        <SelectedPlayers purchasePlayers={purchasePlayers}></SelectedPlayers>
       )}
     </div>
   );

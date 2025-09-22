@@ -1,10 +1,17 @@
-import React, { useState } from "react";
 import userImg from "../../assets/user-1.png";
 import flagImg from "../../assets/report-1.png";
-const PlayerCard = ({ player }) => {
-  const [isSelected, setIsSelected] = useState(false);
+import { toast } from "react-toastify";
+const PlayerCard = ({ player, handlePurchasePlayer, purchasePlayers }) => {
+  const isSelected = purchasePlayers.some((p) => p.id === player.id);
   const handleSelected = () => {
-    setIsSelected(true);
+    if (purchasePlayers.length === 6) {
+      toast("your limit exceeded!");
+      return;
+    }
+    if (!isSelected) {
+      handlePurchasePlayer(player);
+      toast(`You Purchased ${player.player_name}`);
+    }
   };
 
   return (
