@@ -14,7 +14,7 @@ const PlayerCard = ({ player }) => {
       </figure>
       <div className="pt-4">
         <div className="flex items-center gap-3">
-          <img className="w-6 h-6 object-cover" src={userImg} alt="" />
+          <img loading="lazy" className="w-6 h-6 object-cover" src={userImg} alt="" />
           <h2 className="card-title">{player.player_name}</h2>
         </div>
         <div className="flex justify-between items-center py-4 border-b border-gray-300">

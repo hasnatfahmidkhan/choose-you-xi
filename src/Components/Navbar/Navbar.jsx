@@ -36,7 +36,7 @@ const Navbar = () => {
 
               className="btn font-medium inline-flex items-center"
             >
-              <span>0</span>Coin <img src={currencyImg} alt="" />
+              <span>100,000,000</span>Coin <img src={currencyImg} alt="" />
             </button>
           </li>
         </ul>
